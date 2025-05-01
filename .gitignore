@@ -1,0 +1,44 @@
+# PostgreSQL
+*.dump
+*.backup
+*.sql.gz
+
+# Configuration
+config_local.sql
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-*
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.log
+
+# Python (if used for automation)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Jupyter Notebooks (if used for analysis)
+.ipynb_checkpoints/
+
+# Data files that shouldn't be tracked
+*.csv
+*.xlsx
+*.xls
+*.parquet
+
+# Output and generated files
+report/output/*
+!report/output/.gitkeep
+# Crontab files
+*.cron
+crontab.txt
