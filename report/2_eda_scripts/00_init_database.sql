@@ -98,21 +98,21 @@ CREATE TABLE gold.fact_sales (
 TRUNCATE TABLE gold.dim_customers;
 TRUNCATE TABLE gold.dim_customers;
 COPY gold.dim_customers
-FROM '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/report/1_gold_layer_datasets/dim_customers.csv'
+FROM '../1_gold_layer_datasets/dim_customers.csv'
 DELIMITER ','
 CSV HEADER;
 
 -->> gold.dim_products
 TRUNCATE TABLE gold.dim_products;
 COPY gold.dim_products
-FROM '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/report/1_gold_layer_datasets/dim_products.csv'
+FROM '../1_gold_layer_datasets/dim_products.csv'
 DELIMITER ','
 CSV HEADER;
 
 -->> gold.fact_sales
 TRUNCATE TABLE gold.fact_sales;
 COPY gold.fact_sales
-FROM '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/report/1_gold_layer_datasets/fact_sales.csv'
+FROM '../1_gold_layer_datasets/fact_sales.csv'
 DELIMITER ','
 CSV HEADER;
 ----------------------------------------------------------------------------------------------------
@@ -122,15 +122,15 @@ CSV HEADER;
 -- Use \copy for efficient data loading in psql.
 -->> gold.dim_customers
 \copy gold.dim_customers(customer_id, customer_number, first_name, last_name, country, marital_status, gender, birth_date, create_date)
- FROM '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/report/1_gold_layer_datasets/dim_customers.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
+ FROM '../1_gold_layer_datasets/dim_customers.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
 
 -->> gold.dim_products
 \copy gold.dim_products(product_id, product_number, product_name, category_id, category, subcategory, maintenance, product_cost, product_line, start_dt) 
-FROM '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/report/1_gold_layer_datasets/dim_products.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
+FROM '../1_gold_layer_datasets/dim_products.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
 
 -->> gold.fact_sales
 \copy gold.fact_sales(order_number, product_key, customer_key, customer_id, order_date, shipping_date, due_date, sales_amount, quantity, price) 
-FROM '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/report/1_gold_layer_datasets/fact_sales.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
+FROM '../1_gold_layer_datasets/fact_sales.csv' WITH (FORMAT CSV, HEADER, DELIMITER ',');
 ----------------------------------------------------------------------------------------------------
 
 -- Verify data load

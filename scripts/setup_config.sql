@@ -45,12 +45,12 @@ Troubleshooting:
 */
 
 -- Set GUC variables with absolute paths
-SELECT set_config('crm_cust_info_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_crm/cust_info.csv', false);
-SELECT set_config('crm_prd_info_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_crm/prd_info.csv', false);
-SELECT set_config('crm_sales_details_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_crm/sales_details.csv', false);
-SELECT set_config('erp_cust_az12_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_erp/CUST_AZ12.csv', false);
-SELECT set_config('erp_loc_a101_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_erp/LOC_A101.csv', false);
-SELECT set_config('erp_px_cat_g1v2_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_erp/PX_CAT_G1V2.csv', false);
+SELECT set_config('crm_cust_info_path', './datasets/source_crm/cust_info.csv', false);
+SELECT set_config('crm_prd_info_path', './datasets/source_crm/prd_info.csv', false);
+SELECT set_config('crm_sales_details_path', './datasets/source_crm/sales_details.csv', false);
+SELECT set_config('erp_cust_az12_path', './datasets/source_erp/CUST_AZ12.csv', false);
+SELECT set_config('erp_loc_a101_path', './datasets/source_erp/LOC_A101.csv', false);
+SELECT set_config('erp_px_cat_g1v2_path', './datasets/source_erp/PX_CAT_G1V2.csv', false);
 
 -- Verify the variables were set correctly
 SELECT name, setting FROM pg_settings 

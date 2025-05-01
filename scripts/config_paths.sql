@@ -30,12 +30,12 @@ CREATE TABLE config.file_paths (
 
 -- Insert the file paths
 INSERT INTO config.file_paths (path_key, path_value, description) VALUES
-('crm_cust_info_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_crm/cust_info.csv', 'Path to CRM customer information CSV file'),
-('crm_prd_info_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_crm/prd_info.csv', 'Path to CRM product information CSV file'),
-('crm_sales_details_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_crm/sales_details.csv', 'Path to CRM sales details CSV file'),
-('erp_cust_az12_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_erp/CUST_AZ12.csv', 'Path to ERP customer AZ12 CSV file'),
-('erp_loc_a101_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_erp/LOC_A101.csv', 'Path to ERP location A101 CSV file'),
-('erp_px_cat_g1v2_path', '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project/datasets/source_erp/PX_CAT_G1V2.csv', 'Path to ERP PX category G1V2 CSV file');
+('crm_cust_info_path', './datasets/source_crm/cust_info.csv', 'Path to CRM customer information CSV file'),
+('crm_prd_info_path', './datasets/source_crm/prd_info.csv', 'Path to CRM product information CSV file'),
+('crm_sales_details_path', './datasets/source_crm/sales_details.csv', 'Path to CRM sales details CSV file'),
+('erp_cust_az12_path', './datasets/source_erp/CUST_AZ12.csv', 'Path to ERP customer AZ12 CSV file'),
+('erp_loc_a101_path', './datasets/source_erp/LOC_A101.csv', 'Path to ERP location A101 CSV file'),
+('erp_px_cat_g1v2_path', './datasets/source_erp/PX_CAT_G1V2.csv', 'Path to ERP PX category G1V2 CSV file');
 
 -- Function to get a path value
 CREATE OR REPLACE FUNCTION config.get_path(p_key VARCHAR)

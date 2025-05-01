@@ -38,7 +38,8 @@ Variable Naming Convention:
 */
 
 -- Define the base project directory (adjust this to your environment)
-\set project_dir '/Users/macbookpro/Documents/SQL-Data-Warehouse-Project'
+-- Get the current script directory
+\set project_dir '.'
 
 -- Dataset paths
 \set crm_cust_info_path :project_dir '/datasets/source_crm/cust_info.csv'

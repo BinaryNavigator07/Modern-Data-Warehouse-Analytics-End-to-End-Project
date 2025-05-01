@@ -34,7 +34,7 @@ First, edit the `config.sql` file to set the correct project directory for your 
 
 ```sql
 -- Define the base project directory (adjust this to your environment)
-\set project_dir ''/Users/macbookpro/Documents/SQL-Data-Warehouse-Project''
+\set project_dir '.'
 ```
 
 ### 2. Running Scripts
