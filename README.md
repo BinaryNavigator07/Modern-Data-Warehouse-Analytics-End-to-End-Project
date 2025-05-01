@@ -158,7 +158,7 @@ The EDA process was conducted using  SQL queries. The results of the EDA are sto
 - Install **PostgreSQL** → [Download PostgreSQL](https://www.postgresql.org/download/)  
 - Clone this repository:  
   ```bash
-  git clone https://github.com/yourusername/SQL-Data-Warehouse-Project.git
+  git clone https://github.com/BinaryNavigator07/Modern-Data-Warehouse-Analytics-End-to-End-Project
   ```
 - Load sample datasets from the `/datasets/` folder.  
 
@@ -216,16 +216,6 @@ The EDA process was conducted using  SQL queries. The results of the EDA are sto
 📩 **Got questions?** Open an **issue** or reach out to me!  
 
 
-## 🙏 Thank you
-A special thank you to my instructor, Baraa Khatib Salkini.IT Project Manager | Lead Big Data, Data Lakehouse and BI at Mercedes-Benz AG. I learned many things from him.
-*   [LinkedIn](https://www.linkedin.com/in/baraa-khatib-salkini-845b1b55/)
-*   [YouTube](https://www.youtube.com/@DataWithBaraa) 
 
-
-
-## 📌 **Follow me on:**  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/)  
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/)  
-
-📧 Email: your.email@example.com
+📧 Email: umaiesajid@gmail.com
 

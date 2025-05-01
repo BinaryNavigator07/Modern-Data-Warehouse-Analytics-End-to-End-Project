@@ -100,7 +100,7 @@ This script provides monitoring capabilities for the ETL process, including job 
 3. Set up email notifications (optional):
    ```bash
    # Edit these values to enable email notifications
-   EMAIL_RECIPIENT="your.email@example.com"
+   EMAIL_RECIPIENT="umaiesajid@gmail.com"
    ```
 
 ## Example Workflows
