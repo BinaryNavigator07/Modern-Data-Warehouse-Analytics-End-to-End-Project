@@ -8,7 +8,7 @@ CREATE DATABASE "DataWarehouseAnalytics";
 
 CREATE SCHEMA IF NOT EXISTS gold;
 
--- Create tables
+-- Create dimension and fact tables
 CREATE TABLE gold.dim_customers (
     customer_key       SERIAL PRIMARY KEY,
     customer_id        INT,
@@ -52,12 +52,12 @@ CREATE TABLE gold.fact_sales (
 -- Truncate all in correct order to avoid FK issues
 TRUNCATE TABLE gold.fact_sales, gold.dim_products, gold.dim_customers RESTART IDENTITY CASCADE;
 
--- Load data using client-side \copy — make sure you're in `psql`
-\copy gold.dim_customers(customer_id, customer_number, first_name, last_name, country, marital_status, gender, birth_date, create_date) FROM 'report/1_gold_layer_datasets/dim_customers.csv' DELIMITER ',' CSV HEADER;
+-- Load data using client-side \copy — run this in psql CLI
+\copy gold.dim_customers(customer_id, customer_number, first_name, last_name, country, marital_status, gender, birth_date, create_date) FROM 'report/1_gold_layer_datasets/dim_customers.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy gold.dim_products(product_id, product_number, product_name, category_id, category, subcategory, maintenance, product_cost, product_line, start_dt) FROM 'report/1_gold_layer_datasets/dim_products.csv' DELIMITER ',' CSV HEADER;
+\copy gold.dim_products(product_id, product_number, product_name, category_id, category, subcategory, maintenance, product_cost, product_line, start_dt) FROM 'report/1_gold_layer_datasets/dim_products.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
-\copy gold.fact_sales(order_number, product_key, customer_key, customer_id, order_date, shipping_date, due_date, sales_amount, quantity, price) FROM 'report/1_gold_layer_datasets/fact_sales.csv' DELIMITER ',' CSV HEADER;
+\copy gold.fact_sales(order_number, product_key, customer_key, customer_id, order_date, shipping_date, due_date, sales_amount, quantity, price) FROM 'report/1_gold_layer_datasets/fact_sales.csv' DELIMITER ',' CSV HEADER NULL 'NULL';
 
 -- Validation
 SELECT COUNT(*) AS customers_loaded FROM gold.dim_customers;
