@@ -65,6 +65,9 @@ psql
 CREATE ROLE <your username here> WITH LOGIN CREATEDB;
 \q
 ```
+```bash
+createdb <your username here>
+```
 
 
 ## 🛠️ Step-by-Step Guide
