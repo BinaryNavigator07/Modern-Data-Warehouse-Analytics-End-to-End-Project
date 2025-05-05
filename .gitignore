@@ -30,12 +30,6 @@ env/
 # Jupyter Notebooks (if used for analysis)
 .ipynb_checkpoints/
 
-# Data files that shouldn't be tracked
-*.csv
-*.xlsx
-*.xls
-*.parquet
-
 # Output and generated files
 report/output/*
 !report/output/.gitkeep
