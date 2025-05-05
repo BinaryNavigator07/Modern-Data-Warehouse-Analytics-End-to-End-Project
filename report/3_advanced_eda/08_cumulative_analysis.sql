@@ -27,7 +27,7 @@ FROM
     FROM gold.fact_sales
     WHERE order_date IS NOT NULL
     GROUP BY  EXTRACT( YEAR FROM (order_date))
-) t
+)
 
 
 -- 2. Calculate the total sales per month & the running total of sales over time 
