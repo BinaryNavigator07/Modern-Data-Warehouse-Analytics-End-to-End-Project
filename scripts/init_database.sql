@@ -16,9 +16,8 @@ How to use:
     Before running this script, make sure to update the project_dir in config.sql
     to match your environment.
 */
-
 -- Load configuration
-\i /Users/macbookpro/Documents/SQL-Data-Warehouse-Project/config.sql
+\i ./config.sql
 
 -- Terminate active connections to the 'datawarehouse' database
 -- Avoid terminating the current connection

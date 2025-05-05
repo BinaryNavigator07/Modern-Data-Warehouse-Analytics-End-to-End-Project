@@ -238,8 +238,6 @@ BEGIN
 	        RAISE NOTICE '---- ERROR OCCURRED DURING LOADING BRONZE LAYER -----';
 	        RAISE NOTICE 'Error Message: %', SQLERRM;
 	        RAISE NOTICE 'Error Code: %', SQLSTATE;
-	        RAISE NOTICE 'Error Detail: %', COALESCE(PG_EXCEPTION_DETAIL, 'N/A');
-	        RAISE NOTICE 'Error Hint: %', COALESCE(PG_EXCEPTION_HINT, 'N/A');
 	        RAISE NOTICE '----------------------------------------------------';
 	        RAISE NOTICE '';
 
