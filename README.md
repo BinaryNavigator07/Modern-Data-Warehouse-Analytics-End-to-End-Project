@@ -405,7 +405,7 @@ SQL Functions Used:
 psql ${database_name}Analytics -f report/2_eda_scripts/03_date_range_exploration.sql
 ```
 
-*Script Purpose:
+* Script Purpose:
     - To calculate aggregated metrics (e.g., totals, averages) for quick insights.
     - To identify overall trends or spot anomalies.
 
