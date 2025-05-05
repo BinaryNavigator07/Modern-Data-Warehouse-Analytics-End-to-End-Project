@@ -1,3 +1,0 @@
-# New crontab
-30 02 * * * /Users/macbookpro/Documents/SQL-Data-Warehouse-Project/automation/run_etl.sh > /Users/macbookpro/Documents/SQL-Data-Warehouse-Project/automation/logs/etl_$(date +\%Y\%m\%d_\%H\%M\%S).log 2>&1
-30 03 * * * /Users/macbookpro/Documents/SQL-Data-Warehouse-Project/automation/run_etl.sh > /Users/macbookpro/Documents/SQL-Data-Warehouse-Project/automation/logs/etl_$(date +\%Y\%m\%d_\%H\%M\%S).log 2>&1
