@@ -15,7 +15,7 @@ dataset/
     ├── erp_px_cat_g1v2.csv       # Product category information table
 ```
 
-➡️ For more info about Dataset visit [docs/warehouse](../docs/warehouse)
+➡️ For more inofo about Dataset visit `doc/warehouse/` [Link](https://github.com/Rudra-G-23/SQL-Data-Warehouse-Project/tree/main/docs/warehouse)
 
 ---
 
